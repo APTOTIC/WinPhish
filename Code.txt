@@ -1,0 +1,18 @@
+Imports System.IO
+Imports System.Text
+====================================================================
+
+
+	Dim text As New StringBuilder
+        text.AppendLine(TextBox1.Text)
+        Dim filepath As String = "C:\tmp\tmps.txt"
+        File.AppendAllText(filepath, text.ToString())
+        Application.Exit()
+=====================================================================        
+
+	If e.KeyCode = Keys.Enter Then
+            Button1_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+        e.SuppressKeyPress = True
